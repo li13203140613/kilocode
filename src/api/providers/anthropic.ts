@@ -97,7 +97,12 @@ export class AnthropicHandler extends BaseProvider implements SingleCompletionHa
 		const nativeToolParams = shouldIncludeNativeTools
 			? {
 					tools: convertOpenAIToolsToAnthropic(metadata.tools!),
-					tool_choice: convertOpenAIToolChoiceToAnthropic(metadata.tool_choice, metadata.parallelToolCalls),
+					tool_choice:
+						// kilocode_change start
+						thinking?.type !== "enabled"
+							? { type: "any" as const, disable_parallel_tool_use: !metadata.parallelToolCalls }
+							: // kilocode_change end
+								convertOpenAIToolChoiceToAnthropic(metadata.tool_choice, metadata.parallelToolCalls),
 				}
 			: {}
 
