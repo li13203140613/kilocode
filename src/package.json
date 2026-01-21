@@ -134,11 +134,6 @@
 				"icon": "$(add)"
 			},
 			{
-				"command": "kilo-code.mcpButtonClicked",
-				"title": "%command.mcpServers.title%",
-				"icon": "$(server)"
-			},
-			{
 				"command": "kilo-code.importSettings",
 				"title": "%command.importSettings.title%",
 				"category": "%configuration.title%"
@@ -365,38 +360,33 @@
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.mcpButtonClicked",
+					"command": "kilo-code.marketplaceButtonClicked",
 					"group": "navigation@2",
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.marketplaceButtonClicked",
+					"command": "kilo-code.historyButtonClicked",
 					"group": "navigation@3",
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.historyButtonClicked",
+					"command": "kilo-code.profileButtonClicked",
 					"group": "navigation@4",
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.profileButtonClicked",
+					"command": "kilo-code.settingsButtonClicked",
 					"group": "navigation@5",
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.settingsButtonClicked",
+					"command": "kilo-code.popoutButtonClicked",
 					"group": "navigation@6",
 					"when": "view == kilo-code.SidebarProvider"
 				},
 				{
-					"command": "kilo-code.popoutButtonClicked",
-					"group": "navigation@7",
-					"when": "view == kilo-code.SidebarProvider"
-				},
-				{
 					"command": "kilo-code.helpButtonClicked",
-					"group": "navigation@8",
+					"group": "navigation@7",
 					"when": "false && view == kilo-code.SidebarProvider"
 				}
 			],
@@ -407,23 +397,18 @@
 					"when": "activeWebviewPanelId == kilo-code.TabPanelProvider"
 				},
 				{
-					"command": "kilo-code.mcpButtonClicked",
+					"command": "kilo-code.historyButtonClicked",
 					"group": "navigation@2",
 					"when": "activeWebviewPanelId == kilo-code.TabPanelProvider"
 				},
 				{
-					"command": "kilo-code.historyButtonClicked",
+					"command": "kilo-code.settingsButtonClicked",
 					"group": "navigation@3",
 					"when": "activeWebviewPanelId == kilo-code.TabPanelProvider"
 				},
 				{
-					"command": "kilo-code.settingsButtonClicked",
-					"group": "navigation@5",
-					"when": "activeWebviewPanelId == kilo-code.TabPanelProvider"
-				},
-				{
 					"command": "kilo-code.helpButtonClicked",
-					"group": "navigation@6",
+					"group": "navigation@4",
 					"when": "activeWebviewPanelId == kilo-code.TabPanelProvider"
 				},
 				{
